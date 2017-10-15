@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2338c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LQK-Qj-dfc">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LQK-Qj-dfc" secondAttribute="height" id="fZJ-7g-tOJ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="170" id="g7y-UD-8Nj"/>
+                                </constraints>
+                                <state key="normal" image="BeetButton"/>
+                                <connections>
+                                    <action selector="didTapBeetButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="MrI-vb-ipK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07u-qu-sPk">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="1V3-xj-7qP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.9882352941176471" green="0.0039215686274509803" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FeQ-WQ-8p8">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Vb-Wm-sSe"/>
+                                    <constraint firstAttribute="width" secondItem="FeQ-WQ-8p8" secondAttribute="height" multiplier="1:1" id="hun-sg-iEm"/>
+                                </constraints>
+                                <state key="normal" image="UndoButton"/>
+                                <connections>
+                                    <action selector="didTapUndoButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="d6G-hN-u39"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BeetCount-0" translatesAutoresizingMaskIntoConstraints="NO" id="TmB-Wb-YZM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="NkX-bq-0lq"/>
+                                    <constraint firstAttribute="width" secondItem="TmB-Wb-YZM" secondAttribute="height" multiplier="15:8" id="pmH-Xk-T3a"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JrP-kw-9SY" userLabel="Play Button">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JrP-kw-9SY" secondAttribute="height" multiplier="1:1" id="5o7-4v-P9p"/>
+                                    <constraint firstAttribute="height" constant="60" id="TyK-Qg-pau"/>
+                                </constraints>
+                                <state key="normal" image="ShareButton"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="ObA-dk-sSI" eventType="touchUpInside" id="f3v-Az-5fE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TmB-Wb-YZM" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" constant="16" id="1vS-ZW-5Q5"/>
+                            <constraint firstItem="LQK-Qj-dfc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="12" id="2SY-iE-i0B"/>
+                            <constraint firstItem="TmB-Wb-YZM" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="4Wc-Ba-uVJ"/>
+                            <constraint firstAttribute="trailing" secondItem="07u-qu-sPk" secondAttribute="trailing" constant="6" id="9w8-YM-qgH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JrP-kw-9SY" secondAttribute="trailing" constant="6" id="JMy-nh-FYU"/>
+                            <constraint firstItem="LQK-Qj-dfc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="24" id="OH4-Xk-s9e"/>
+                            <constraint firstItem="LQK-Qj-dfc" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" constant="-16" id="QYw-Qo-IU1"/>
+                            <constraint firstItem="LQK-Qj-dfc" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="Y57-DC-7cA"/>
+                            <constraint firstItem="07u-qu-sPk" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" constant="6" id="dJK-vl-lb2"/>
+                            <constraint firstItem="FeQ-WQ-8p8" firstAttribute="bottom" secondItem="LQK-Qj-dfc" secondAttribute="bottom" id="fxn-Fs-tRD"/>
+                            <constraint firstItem="FeQ-WQ-8p8" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="6" id="kHu-fd-wXD"/>
+                            <constraint firstItem="JrP-kw-9SY" firstAttribute="bottom" secondItem="LQK-Qj-dfc" secondAttribute="bottom" id="lOH-Ph-wyf"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="LQK-Qj-dfc" secondAttribute="trailing" constant="12" id="r77-T0-CPS"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="beetButton" destination="LQK-Qj-dfc" id="2Ih-yi-Ov4"/>
+                        <outlet property="countImageView" destination="TmB-Wb-YZM" id="mRh-ws-W6I"/>
+                        <outlet property="instructionLabel" destination="07u-qu-sPk" id="nCx-mb-U8D"/>
+                        <outlet property="shareButton" destination="JrP-kw-9SY" id="iGJ-IQ-GT6"/>
+                        <outlet property="undoButton" destination="FeQ-WQ-8p8" id="2c4-dt-K5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.600000000000001" y="37.781109445277366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BeetButton" width="512" height="512"/>
+        <image name="BeetCount-0" width="512" height="146"/>
+        <image name="ShareButton" width="512" height="512"/>
+        <image name="UndoButton" width="512" height="512"/>
+    </resources>
+</document>
